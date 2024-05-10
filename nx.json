@@ -35,7 +35,29 @@
         "targetName": "test"
       },
       "exclude": ["apps/api-e2e/**/*"]
+    },
+    {
+      "plugin": "@nx/next/plugin",
+      "options": {
+        "startTargetName": "start",
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "serveStaticTargetName": "serve-static"
+      }
     }
   ],
-  "nxCloudAccessToken": "ZDgyNWE3NDgtY2FjMi00YWYxLTkxYTUtMDhhMWE1MGNkMjY0fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ZDgyNWE3NDgtY2FjMi00YWYxLTkxYTUtMDhhMWE1MGNkMjY0fHJlYWQtd3JpdGU=",
+  "generators": {
+    "@nx/next": {
+      "application": {
+        "style": "tailwind",
+        "linter": "eslint"
+      }
+    }
+  },
+  "targetDefaults": {
+    "build-custom-server": {
+      "cache": true
+    }
+  }
 }

@@ -2,6 +2,11 @@
   "recommendations": [
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
-    "firsttris.vscode-jest-runner"
+    "firsttris.vscode-jest-runner",
+    "freecodecamp.freecodecamp-dark-vscode-theme",
+    "fuhidev.vscode-nesttypeorm",
+    "rangav.vscode-thunder-client",
+    "christian-kohler.npm-intellisense",
+    "kamikillerto.vscode-colorize"
   ]
 }

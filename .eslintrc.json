@@ -10,11 +10,11 @@
           "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": [],
+            "allow": ["@api/**"],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "scope:api",
+                "onlyDependOnLibsWithTags": ["scope:api"]
               }
             ]
           }

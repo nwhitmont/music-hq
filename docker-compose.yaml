@@ -1,0 +1,19 @@
+name: 'music-hq'
+
+services:
+  postgres:
+    image: 'postgres'
+    container_name: 'music-hq-api-postgres'
+    restart: 'always'
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=spongebob
+      - POSTGRES_PASSWORD=squarepants
+      - POSTGRES_DB=music_hq
+    logging:
+      options:
+        max-size: 10m
+        max-file: '3'
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data

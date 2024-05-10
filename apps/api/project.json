@@ -4,6 +4,9 @@
   "sourceRoot": "apps/api/src",
   "projectType": "application",
   "tags": [],
+  "nx": {
+    "tags": ["scope:api"]
+  },
   "targets": {
     "serve": {
       "executor": "@nx/js:node",
