@@ -1,4 +1,4 @@
-import { request as _request } from 'http'
+const _request = require('http').request
 
 function checkApiServerStatus(host, port, timeout = 3000) {
   return new Promise((resolve, reject) => {

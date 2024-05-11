@@ -1,13 +1,6 @@
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
-const {
-  color,
-  log,
-  red,
-  green,
-  cyan,
-  cyanBright,
-} = require('console-log-colors')
+const { cyanBright, yellow, red } = require('console-log-colors')
 const figlet = require('figlet')
 
 async function isServiceRunning(serviceName) {
@@ -20,12 +13,12 @@ async function isServiceRunning(serviceName) {
     if (composeId && runningIds.includes(composeId.trim())) {
       console.log(cyanBright(`Postgres database is running 🚀`))
       figlet.text(
-        'DATABASE ONLINE',
+        '* DATABASE ONLINE *',
         {
-          font: 'Graceful',
+          font: 'Small',
           horizontalLayout: 'default',
           verticalLayout: 'default',
-          width: 100,
+          width: 120,
           whitespaceBreak: true,
         },
         (error, data) => {
@@ -39,7 +32,7 @@ async function isServiceRunning(serviceName) {
       )
       return true
     } else {
-      console.log(`Service: '${serviceName}' is not running`)
+      console.log(red(`💥 >> Service: '${serviceName}' is not running << 😭`))
       return false
     }
   } catch (error) {
@@ -51,8 +44,12 @@ async function isServiceRunning(serviceName) {
 const serviceName = 'postgres'
 isServiceRunning(serviceName).then((isRunning) => {
   if (isRunning) {
-    console.info(`Run 'nx api.start' to initialize the Nest.js API Server`)
+    console.log(`Run 'nx api.start' to initialize the Nest.js API Server`)
   } else {
-    console.info(`Run 'nx db.start' to initialize the API PostgeSQL Container`)
+    console.log(
+      yellow(
+        `Run 'nx db.start' to run the PostgeSQL Container\nbefore starting the API server.`
+      )
+    )
   }
 })
