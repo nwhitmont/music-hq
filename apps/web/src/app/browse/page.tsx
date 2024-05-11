@@ -1,5 +1,5 @@
-// browse all music in database
-// get all tracks via redux
+'use client'
+
 import { Tracks } from '../../lib/features/tracks/Tracks'
 
 // route: /browse
