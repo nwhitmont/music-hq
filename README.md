@@ -1,5 +1,7 @@
 # music-hq
 
+Note: demo app && work in progress, not all features complete or working.
+
 ## Overview
 
 This is an example project that demonstrates a Full Stack Typescript web application utilizing the modern (2024) tooling:
