@@ -35,7 +35,7 @@ Note: for nx custom task deinitions, see: ./package.json -> scripts section
 
 ```
 // check if database container is running
-> nx check.api
+> nx check.db
 
 // start database container
 > nx db.start
