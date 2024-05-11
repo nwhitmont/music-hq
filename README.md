@@ -25,6 +25,7 @@ This is an example project that demonstrates a Full Stack Typescript web applica
 - In VSCode: Install the recommended Extensions
 - `npm install` - install project dependencies
 - `nx start.db` - start the database container
+- `nx check.db` - verify db container is running
 - `nx api.dev` - start the API server in development mode
 - `nx web.dev` - start the Web client in development mode
 
